@@ -10,9 +10,16 @@ Console.WriteLine("Введите второе число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
 int max = numberA;
+int min = numberA;
 
 if (numberA > max ) max = numberA;
 if (numberB > max ) max = numberB;
 
+if (numberA < min ) min = numberA;
+if (numberB < min ) min = numberB;
+
 Console.Write("Наибольшее из этих двух чисел - ");
 Console.WriteLine(max);
+
+Console.Write("Наименьшее из этих двух чисел - ");
+Console.WriteLine(min);
