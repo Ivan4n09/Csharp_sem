@@ -10,4 +10,6 @@ while (count<=number)
 {
     Console.Write(count+", ");
     count++;
+    // count = count + 1
+    // count += 1
 }
