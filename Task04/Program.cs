@@ -14,7 +14,9 @@ int numberС = Convert.ToInt32(Console.ReadLine());
 
 int max = numberA;
 
-if (numberA > max ) max = numberA;
+// if (numberA > max ) max = numberA;   - лишнее условие. 
+// Либо можно было написать int max = 0 (а не int max = numberA)
+
 if (numberB > max ) max = numberB;
 if (numberС > max ) max = numberС;
 

@@ -3,9 +3,9 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.WriteLine("Введите положительное натуральное число: ");
+Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int count = 0;
+int count = 2;
 if (number > 0)
 while (count<=number)
 {
@@ -15,3 +15,5 @@ while (count<=number)
 }
 else
     Console.WriteLine("Вы ввели неправильное число");
+
+// Конечно, это просто упражнение, но хочется обусловаить все максимально
