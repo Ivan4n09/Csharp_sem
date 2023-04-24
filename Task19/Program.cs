@@ -17,6 +17,10 @@ if (ValidateNumber(number))
         Console.WriteLine("Число не является палиндромом");
     }
 }
+else
+System.Console.WriteLine("Не пятизначное число");
+
+
 
 int Prompt(string input)
 {
@@ -28,9 +32,8 @@ int Prompt(string input)
 
 bool ValidateNumber(int num)
 {
-    if (Math.Abs(num) < 10000) // Math.Abs - абсолютное значение, напр. абс. знач. -5 = 5
+    if (Math.Abs(num) < 10000 || Math.Abs(num) > 99999) // Math.Abs - абсолютное значение, напр. абс. знач. -5 = 5
     {
-        System.Console.WriteLine("Не пятизначное число");
         return false;
     }
     return true;
@@ -47,6 +50,10 @@ bool PalindromeCheck(int ourNum)
         return false;
     }
 }
+
+// Каждый метод должен быть полноценным универсальным модулем или границы функционала должны быть отражены в названии методов. 
+// Например, из названия GetFirstDigit не следует, что он работает только с пятизначными числами
+// подумать, как исправить
 
 int GetFirstDigit(int num)
 {
