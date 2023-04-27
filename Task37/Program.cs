@@ -40,7 +40,7 @@ int[] MultiplicatePairArray(int[] arr)
     return newArr;
 }
 
-int[] array = CreateArrayRndInt(5, 0, 10);
+int[] array = CreateArrayRndInt(5, 1, 10);
 
 int[] arrayRes = MultiplicatePairArray(array);
 
