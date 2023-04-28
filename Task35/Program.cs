@@ -26,7 +26,7 @@ void PrintArray(int[] arr)
     }
 }
 
-int FindCount(int[] arr)
+int FindCount(int[] arr) // bad name
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)

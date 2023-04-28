@@ -34,12 +34,10 @@ int AmountEvenNumbersCheck(int[] arr)
     return count;
 }
 
-int[] array = CreateArrayRndInt(5, 1, 5);
+int[] array = CreateArrayRndInt(5, 100, 999);
 
 Console.Write("[");
 PrintArray(array);
 Console.WriteLine("]");
-
-Console.WriteLine();
 
 Console.Write($"Количество четных чисел - {AmountEvenNumbersCheck(array)}");
