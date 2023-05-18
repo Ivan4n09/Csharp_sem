@@ -56,4 +56,4 @@ Console.Write("[");
 PrintArray(array);
 Console.WriteLine("]");
 
-Console.Write($"Difference between min and max elements - {DifferenceMinMaxArrayElements(array)}");
+Console.Write($"Difference between min and max elements - { Math.Round ( DifferenceMinMaxArrayElements (array), 1 ) }");
