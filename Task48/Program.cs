@@ -13,11 +13,11 @@ int[,] CreateMatrix (int rows, int columns)
     int[,] matrix = new int[rows,columns];
     Random rnd = new Random();
 
-    for (int i = 0; i < matrix.GetLength(0); i++)// строки - нулевое измерение массива
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) // первое измерение
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = i+j; // - условие
+            matrix[i, j] = i+j;
         }
     }
     return matrix;
