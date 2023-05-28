@@ -24,16 +24,15 @@
 //     return matrix;
 // }
 
-int[,] CreateMatrixRndInt (int rows, int columns, int min, int max)
+int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
-    int[,] matrix = new int[rows,columns];
+    int[,] matrix = new int[rows, columns];
     Random rnd = new Random();
-
-    for (int i = 0; i < matrix.GetLength(0); i++)// строки - нулевое измерение массива
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) // первое измерение
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rnd.Next(min, max+1);
+            matrix[i, j] = rnd.Next(min, max + 1);
         }
     }
     return matrix;
@@ -60,14 +59,32 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
-int[,] array2d = CreateMatrixRndInt(3, 4, 0, 5);
+void PromptMatrixPosition (int[,] matrix)
+{
+    int coordRow = Prompt("Введите строку > ");
+    int coordColumn = Prompt("Введите столбец > ");
 
-int coordRow = Prompt("Введите строку >");
-int coordColumn = Prompt("Введите строку >");
+    if (coordRow < 0 || coordColumn < 0 || coordRow >= matrix.GetLength(0) || coordColumn >= matrix.GetLength(1))
+    {
+        Console.WriteLine("Неверные координаты");
+    }
+    else
+    {
+        Console.WriteLine($"Значение элемента на позиции [{coordRow}, {coordColumn}] = {matrix[coordRow, coordColumn]}");
+    }
+}
 
-if (coordRow < 0 || coordColumn < 0)
-Console.WriteLine("Неверные координаты");
-else
-Console.WriteLine($"Содержание > {array2d[coordRow,coordColumn]}");
-Console.WriteLine();
+int[,] array2d = CreateMatrixRndInt(3, 4, 0, 9);
+
+// int coordRow = Prompt("Введите строку >");
+// int coordColumn = Prompt("Введите строку >");
+
+// if (coordRow < 0 || coordColumn < 0 || coordRow >= array2d.GetLength(0) || coordColumn >= array2d.GetLength(1))
+// Console.WriteLine("Неверные координаты");
+// else
+// Console.WriteLine($"Содержание > {array2d[coordRow,coordColumn]}");
+// Console.WriteLine();
+
 PrintMatrix(array2d);
+
+PromptMatrixPosition(array2d);
