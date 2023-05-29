@@ -28,25 +28,25 @@ void PrintMatrix (int[,] matrix)
         {
             Console.Write($"{matrix[i,j], 4} ");
         }
-        Console.WriteLine(" |");
+        Console.WriteLine("  |");
     }
 }
 
 void ArithmeticalMeanAllElementsEachColumn(int[,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(1); i++) // iteration over columns
+    for (int i = 0; i < matrix.GetLength(1); i++) // iteration over COLUMNS - GetLength(1)
     {
         int columnSum = 0;
-        for (int j = 0; j < matrix.GetLength(0); j++) // iteration over rows
+        for (int j = 0; j < matrix.GetLength(0); j++) // iteration over ROWS - GetLength(0)
         {
             columnSum += matrix[j, i]; // add element to column sum
         }
-        double mean = (double)columnSum / matrix.GetLength(0); // calculate mean
+        double mean = (double)columnSum / matrix.GetLength(0); // calculate average
         Console.WriteLine($"Среднее арифметическое столбца {i}: {mean, 10:F3}");
     }
 }
 
-int[,] array2d = CreateMatrixRndInt(3, 4, 0, 9);
+int[,] array2d = CreateMatrixRndInt(3 , 4, 0, 9);
 PrintMatrix(array2d);
 
 ArithmeticalMeanAllElementsEachColumn(array2d);
